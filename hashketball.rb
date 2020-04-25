@@ -213,7 +213,8 @@ def player_numbers(tm_name)
         end
       end
     end
-  end  
+  end
+  jersey_array
 end
   
 
