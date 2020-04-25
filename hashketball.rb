@@ -220,14 +220,15 @@ end
 
 #player_stats
 def player_stats(player_name)
+  player_statistics = {}
   home_players = game_hash[:home][:players]
   away_players = game_hash[:away][:players]
   all_players = (away_players + home_players)
   all_players.each do |element|
     element.each do |key, value|
       if element[key] == player_name
-        shoe_size = element[:shoe]
-        return shoe_size
+        player_statistics = element
+      return player_statistics
       end
     end
   end
