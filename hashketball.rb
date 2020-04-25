@@ -220,7 +220,6 @@ end
 
 #player_stats
 def player_stats(player_name)
-  shoe_size = 0
   home_players = game_hash[:home][:players]
   away_players = game_hash[:away][:players]
   all_players = (away_players + home_players)
