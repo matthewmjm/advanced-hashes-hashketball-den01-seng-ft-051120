@@ -237,7 +237,10 @@ end
 
 #big_shoe_rebounds
 def big_shoe_rebounds
-
-
+  the_player = ""
+  home_players = game_hash[:home][:players]
+  away_players = game_hash[:away][:players]
+  all_players = (away_players + home_players)
+  all_players.each do |element|
 
 end
