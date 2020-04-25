@@ -194,13 +194,26 @@ end
 #player_numbers
 def player_numbers(tm_name)
   jersey_array = []
-  game_hash.each do |key, value|
-    value.each do |key2, value2|
-      if value2 == tm_name     
-     
-      end      
-    end      
-  end      
+  if game_hash[:home][:team_name] == tm_name
+    game_hash[:home][:players].each do |element|
+      element.each do |key3, value3|
+        if key3 == :number
+          jersey_array.push(value3)
+        else
+        end
+      end
+    end
+  else
+    game_hash[:away][:team_name] == tm_name
+    game_hash[:away][:players].each do |element|
+      element.each do |key3, value3|
+        if key3 == :number
+          jersey_array.push(value3)
+        else
+        end
+      end
+    end
+  end  
 end
   
 
