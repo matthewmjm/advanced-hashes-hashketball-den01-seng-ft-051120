@@ -219,7 +219,20 @@ end
   
 
 #player_stats
-
+def
+  shoe_size = 0
+  home_players = game_hash[:home][:players]
+  away_players = game_hash[:away][:players]
+  all_players = (away_players + home_players)
+  all_players.each do |element|
+    element.each do |key, value|
+      if element[key] == player_name
+        shoe_size = element[:shoe]
+        return shoe_size
+      end
+    end
+  end
+end
 
 
 #big_shoe_rebounds
