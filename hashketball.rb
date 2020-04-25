@@ -237,10 +237,21 @@ end
 
 #big_shoe_rebounds
 def big_shoe_rebounds
-  the_player = ""
+  largest_shoe = 0
+  result = {}
   home_players = game_hash[:home][:players]
   away_players = game_hash[:away][:players]
   all_players = (away_players + home_players)
   all_players.each do |element|
-
+    element.each do |key, value|
+      if key == :shoe
+        if value > largest_shoe
+          largest_shoe = value
+          result = element
+        else
+        end
+      else
+      end
+    end
+  end
 end
